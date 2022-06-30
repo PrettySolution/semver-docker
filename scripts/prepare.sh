@@ -1,1 +1,2 @@
+env
 docker build -t "$1" .

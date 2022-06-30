@@ -7,7 +7,7 @@ module.exports = {
             "@semantic-release/exec",
             {
                 "prepareCmd": "scripts/prepare.sh ${nextRelease.version}",
-                "successCmd": "scripts/success.sh ${process.env.DOCKER_USERNAME}/${process.env.DOCKER_REPOSITORY_NAME}:${nextRelease.version}"
+                "successCmd": "scripts/success.sh ${nextRelease.version}"
             }
         ],
         [

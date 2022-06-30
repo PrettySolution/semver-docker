@@ -1,3 +1,3 @@
-echo "{\"sha\":\"$GITHUB_SHA\", \"semver\":\"$DOCKER_REPOSITORY_NAME:$2\"}" > semver.json
+echo "{\"sha\":\"$GITHUB_SHA\", \"semver\":\"$1\", \"docker_image\":\"$DOCKER_REPOSITORY_NAME\"}" > semver.json
 cat semver.json
-docker build -t "$1" .
+docker build -t "$DOCKER_USERNAME/$DOCKER_REPOSITORY_NAME" .
